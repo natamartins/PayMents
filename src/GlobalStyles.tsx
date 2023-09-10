@@ -1,3 +1,4 @@
+"use client"
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
@@ -8,13 +9,7 @@ const GlobalStyles = createGlobalStyle`
   list-style: none;
   :focus {
     outline: none;
+  }
 }
-}
-
-body{
-  background-color: #333;
-  color: #f1f1f1;
-}
-
 `;
 export default GlobalStyles;

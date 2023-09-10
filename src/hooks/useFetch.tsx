@@ -2,23 +2,24 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-const useFetch = () => {
+export const useFetch = (dolar: number, taxa: number) => {
     const [coin, setCoin] = useState({})
 
     async function getCoin() {
         try {
-            const { data } = await axios.get('')
-            setCoin(data)
+            const { data } = await axios.get('https://economia.awesomeapi.com.br/last/USD-BRL')
+
+            if (isNaN(dolar) || dolar < 0) {
+                throw new Error('O valor em dólar deve ser um número positivo.')
+            }
+
+            const valueInReal = dolar * data.USDBRL.bid
+            setCoin(valueInReal)
+
         } catch (err) {
             console.log("Erro ==>", err)
         }
     }
 
-    useEffect(() => {
-        getCoin()
-    }, [])
-
-    return { coin }
+    return { coin, getCoin }
 }
-
-export default useFetch
