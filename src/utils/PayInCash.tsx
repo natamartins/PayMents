@@ -1,10 +1,7 @@
-export default function Cash() {
-    const dolar: any = ''
-    const imposto: any = ''
-    const iof: any = ''
-    const infra = (dolar + iof)
+export default function Cash(coin: any, taxa: any) {
+    const taxaIOF = 1.1 / 100;
 
-    const total = dolar + imposto * infra
+    const same = coin + taxa * (coin + taxaIOF)
 
-    return total
+    return console.log("Dinheiro ==>", same)
 }
