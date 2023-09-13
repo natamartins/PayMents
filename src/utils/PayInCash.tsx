@@ -1,7 +1,6 @@
-export default function Cash(coin: any, taxa: any) {
-    const taxaIOF = 1.1 / 100;
+export function Cash(coin: any, taxa: any, valueDolar: any, router: any) {
+    const taxaIOF = 1.1;
+    const same = coin + taxa * valueDolar + taxaIOF
 
-    const same = coin + taxa * (coin + taxaIOF)
-
-    return console.log("Dinheiro ==>", same)
+    return router.push(`/ResulteSame/${same}${valueDolar}`);
 }
