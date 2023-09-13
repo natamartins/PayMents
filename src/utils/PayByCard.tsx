@@ -1,7 +1,6 @@
-export default function Card(coin: any, taxa: any) {
+export function Card(coin: any, taxa: any, valueDolar: any, router: any) {
     const taxaIOFTransition = 6.38;
-    const same = (coin + taxa + taxaIOFTransition) * coin
+    const same: any = coin + taxa + taxaIOFTransition * valueDolar
 
-
-    return console.log("Cartaõ ==>", same)
-}
+    return router.push(`/ResulteSame/${same}${valueDolar}`);
+} 

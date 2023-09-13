@@ -1,34 +1,39 @@
-'use client'
+"use client"
 import React, { useState } from 'react'
-import { Box, BoxForm, ButtonOff, CheckRadius, Form, Input, Label } from '@/Styles/ComponentsUtils'
+import { Box, BoxCheck, BoxForm, BoxFormCheck, BoxFormConvert, ButtonOff, CheckRadius, Form, Input, Label, TitleTortary } from '@/Styles/ComponentsUtils'
 import { useFetch } from '@/hooks/useFetch'
-import Cash from '@/utils/PayInCash'
-import Card from '@/utils/PayByCard'
+import Image from 'next/image'
+import Transfer from '@/imgs/Transfer.svg'
+import { useRouter } from 'next/navigation'
+import { Cash } from '@/utils/PayInCash'
+import { Card } from '@/utils/PayByCard'
 
 const Index = () => {
     const [coin, setCoin]: any = useState()
     const [taxa, setTaxa]: any = useState()
-    const [opcaoSelecionada, setOpcaoSelecionada] = useState('opcao1');
-    const { coin: dateCoin, getCoin } = useFetch(coin, taxa)
+    const [opcao, setOpcaoSelecionada] = useState('opcao1');
+    const router = useRouter();
+    const { valueDolar }: any = useFetch()
 
     const handleChange = (e: any) => {
         setOpcaoSelecionada(e.target.value);
-
     };
 
     const handleGetInfo = (e: any) => {
         e.preventDefault()
-        if (opcaoSelecionada === 'opcao1') {
-            Cash(coin, taxa)
-        } else if (opcaoSelecionada === 'opcao2') {
-            Card(coin, taxa)
+
+        if (opcao === 'opcao1') {
+            Cash(valueDolar, coin, taxa, router)
+        } else if (opcao === 'opcao2') {
+            Card(valueDolar, coin, taxa, router)
+            // router.push(`/ResulteSame/${totalCash}${totalCard}`);
         }
-        // getCoin()
     }
+
 
     return (
         <Form onSubmit={handleGetInfo}>
-            <BoxForm>
+            <BoxFormConvert>
                 <Box>
                     <Label>Dólar</Label>
                     <Input
@@ -49,31 +54,36 @@ const Index = () => {
                         placeholder='0%'
                     />
                 </Box>
-            </BoxForm>
+            </BoxFormConvert>
             <BoxForm>
-                <Label>Tipo de compra</Label>
-                <Box>
-                    <CheckRadius
-                        type='radio'
-                        name="opcao"
-                        value="opcao1"
-                        checked={opcaoSelecionada === 'opcao1'}
-                        onChange={handleChange}
-                    />
-                    <Label>Dinheiro</Label>
-                </Box>
-                <Box>
-                    <CheckRadius
-                        type='radio'
-                        name="opcao"
-                        value="opcao2"
-                        checked={opcaoSelecionada === 'opcao2'}
-                        onChange={handleChange}
-                    />
-                    <Label>Cartão</Label>
-                </Box>
+                <TitleTortary>Tipo de compra</TitleTortary>
+                <BoxFormCheck>
+                    <BoxCheck>
+                        <CheckRadius
+                            type='radio'
+                            name="opcao"
+                            value="opcao1"
+                            checked={opcao === 'opcao1'}
+                            onChange={handleChange}
+                        />
+                        <Label>Dinheiro</Label>
+                    </BoxCheck>
+                    <BoxCheck>
+                        <CheckRadius
+                            type='radio'
+                            name="opcao"
+                            value="opcao2"
+                            checked={opcao === 'opcao2'}
+                            onChange={handleChange}
+                        />
+                        <Label>Cartão</Label>
+                    </BoxCheck>
+                </BoxFormCheck>
             </BoxForm>
-            <ButtonOff>Converter</ButtonOff>
+            <ButtonOff>
+                <Image src={Transfer} alt='' />
+                Converter
+            </ButtonOff>
         </Form>
     )
 }
