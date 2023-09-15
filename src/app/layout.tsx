@@ -1,11 +1,15 @@
 import GlobalStyles from '@/GlobalStyles'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import { BoxInfo, BoxNavInfo, Header, Main, Nav, TitlePrimery, TitleSecondy } from '@/Styles/ComponentsUtils'
 import ImgLogo from '@/imgs/MainLogo.svg'
 import Image from 'next/image'
+import { dataHoraFormatada } from '@/utils/GetTimeAndDate'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '700']
+})
 
 export const metadata: Metadata = {
   title: 'PayMents',
@@ -19,14 +23,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <GlobalStyles />
         <Header>
           <Nav>
             <Image src={ImgLogo} alt='logo do site: stone currency' />
             <BoxNavInfo>
               <BoxInfo>
-                <TitlePrimery>14 de  janeiro 2021</TitlePrimery> | <TitlePrimery>21:00 UTC</TitlePrimery>
+                <TitlePrimery>{dataHoraFormatada}</TitlePrimery>
               </BoxInfo>
               <TitleSecondy>Dados de cambio disponivel pela mornigstar.</TitleSecondy>
             </BoxNavInfo>

@@ -1,19 +1,19 @@
 "use client"
 import React, { useState } from 'react'
-import { Box, BoxCheck, BoxForm, BoxFormCheck, BoxFormConvert, ButtonOff, CheckRadius, Form, Input, Label, TitleTortary } from '@/Styles/ComponentsUtils'
 import { useFetch } from '@/hooks/useFetch'
 import Image from 'next/image'
 import Transfer from '@/imgs/Transfer.svg'
 import { useRouter } from 'next/navigation'
 import { Cash } from '@/utils/PayInCash'
 import { Card } from '@/utils/PayByCard'
+import { Box, BoxCheck, BoxForm, BoxFormCheck, BoxFormConvert, ButtonOff, ButtonOn, CheckRadius, Form, Input, Label, TitleTortary } from '@/Styles/ComponentsUtils'
 
 const Index = () => {
-    const [coin, setCoin]: any = useState()
-    const [taxa, setTaxa]: any = useState()
-    const [opcao, setOpcaoSelecionada] = useState('opcao1');
     const router = useRouter();
     const { valueDolar }: any = useFetch()
+    const [coin, setCoin]: any = useState('')
+    const [taxa, setTaxa]: any = useState('')
+    const [opcao, setOpcaoSelecionada] = useState('opcao1');
 
     const handleChange = (e: any) => {
         setOpcaoSelecionada(e.target.value);
@@ -23,13 +23,11 @@ const Index = () => {
         e.preventDefault()
 
         if (opcao === 'opcao1') {
-            Cash(valueDolar, coin, taxa, router)
+            Cash(coin, taxa, valueDolar, router)
         } else if (opcao === 'opcao2') {
-            Card(valueDolar, coin, taxa, router)
-            // router.push(`/ResulteSame/${totalCash}${totalCard}`);
+            Card(coin, taxa, valueDolar, router)
         }
     }
-
 
     return (
         <Form onSubmit={handleGetInfo}>
@@ -80,10 +78,20 @@ const Index = () => {
                     </BoxCheck>
                 </BoxFormCheck>
             </BoxForm>
-            <ButtonOff>
-                <Image src={Transfer} alt='' />
-                Converter
-            </ButtonOff>
+            {
+                taxa === '' ? (
+                    <ButtonOff disabled>
+                        <Image src={Transfer} alt='icone de converte, uma seta para direita e outra para esquerda' />
+                        Converter
+                    </ButtonOff>
+                ) : (
+                    <ButtonOn>
+                        <Image src={Transfer} alt='icone de converte, uma seta para direita e outra para esquerda' />
+                        Converter
+                    </ButtonOn>
+                )
+
+            }
         </Form>
     )
 }
