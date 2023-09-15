@@ -10,7 +10,8 @@ const theme = {
         },
         button: {
             'gray': '#8C9CAD',
-            'green': '#008B57',
+            'green01': '#00AB63',
+            'green02': '#008B57',
             'white': '#FFFFFF',
         },
         fontWeight: {
@@ -31,6 +32,7 @@ max-width: 50%;
 margin: auto;
 display: flex;
 align-items: center;
+margin-top: 2rem;
 margin-bottom: 5rem;
 gap: 5rem;
 `
@@ -66,12 +68,25 @@ margin-bottom: 1rem;
 `
 
 export const TitleResult = styled.h1`
-color: ${theme.color.button.green};
+color: ${theme.color.button.green01};
 margin-top: 10px;
 margin-bottom: 1rem;
 `
 
-export const ButtonOn = styled.button``
+export const ButtonOn = styled.button`
+width: 150px;
+height: 55px;
+padding-left: 15px;
+display: flex;
+align-items: center;
+gap: 15px;
+border-radius: 8px;
+border: 2px solid ${theme.color.button.green02};
+background-color: ${theme.color.button.green01};
+color: ${theme.color.button.white};
+font-size: 16px;
+cursor: pointer;
+`
 
 export const ButtonOff = styled.button`
 width: 150px;
@@ -81,7 +96,7 @@ display: flex;
 align-items: center;
 gap: 15px;
 border-radius: 8px;
-border: 2px solid ${theme.color.button.gray};
+border: 2px solid ${theme.color.button.green01};
 background-color: ${theme.color.button.gray};
 color: ${theme.color.button.white};
 font-size: 16px;
@@ -151,6 +166,14 @@ border-radius: 8px;
 margin-bottom: 1.5rem;
 border: 1px solid #D7E0EB;
 box-shadow: 0px 8px 4px 0px #0D111B14;
+
+ a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: ${theme.color.text[200]};
+    text-decoration: none;
+ }
 `
 
 export const BoxResult = styled.div`

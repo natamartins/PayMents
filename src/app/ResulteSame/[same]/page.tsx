@@ -4,19 +4,24 @@ import Image from 'next/image'
 import React from 'react'
 import ImgBack from '@/imgs/arrow-left.svg'
 import Link from 'next/link'
+import { formatValue } from '@/utils/FormatValue'
 
 const page = ({ params }: any) => {
-    console.log("Params ==>", params.same)
+    const value = params.same
+    const dolar = formatValue(value)
+
     return (
         <BoxResult>
-            <Link href='/'>
-                <Image src={ImgBack} alt='' />
-                Voltar
-            </Link>
+            <ButtonBackHome>
+                <Link href='/'>
+                    <Image src={ImgBack} alt='' />
+                    Voltar
+                </Link>
+            </ButtonBackHome>
             <TitlePrimery>O resultado do cálculo é</TitlePrimery>
-            <TitleResult>R$ 2000</TitleResult>
+            <TitleResult>R$ {dolar}</TitleResult>
             <TitleSecondy>Compra no dinheiro e taxa de 5.2%</TitleSecondy>
-            <TitleSecondy>Contação do dólar: $1,00 = R$5,20</TitleSecondy>
+            <TitleSecondy>Contação do dólar: $1,00 = R$5,00</TitleSecondy>
         </BoxResult>
     )
 }
