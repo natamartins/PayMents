@@ -80,6 +80,29 @@ margin-bottom: 1rem;
 `
 
 export const ListQuote = styled.ul`
+width: 300px;
+overflow: scroll;
+display: flex;
+gap: 10px;
+
+&::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+
+&::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+&::-webkit-scrollbar-thumb {
+    background-color: rgba(230, 228, 228, 0.493);
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    width: 200px;
+} 
+
 `
 
 export const List = styled.li`
