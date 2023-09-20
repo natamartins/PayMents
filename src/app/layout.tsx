@@ -1,7 +1,7 @@
 import GlobalStyles from '@/GlobalStyles'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
-import { Header, Main } from '@/Styles/ComponentsUtils'
+import { Footer, Header, Main, TitlePrimery } from '@/Styles/ComponentsUtils'
 import NavBar from '@/components/NavBar/Index'
 
 const roboto = Roboto({
@@ -29,6 +29,9 @@ export default function RootLayout({
         <Main>
           {children}
         </Main>
+        <Footer>
+          <TitlePrimery>Natã Martins © - 2023</TitlePrimery>
+        </Footer>
       </body>
     </html>
   )
