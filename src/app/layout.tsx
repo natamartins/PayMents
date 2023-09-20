@@ -1,10 +1,8 @@
 import GlobalStyles from '@/GlobalStyles'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
-import { BoxInfo, BoxNavInfo, Header, Main, Nav, TitlePrimery, TitleSecondy } from '@/Styles/ComponentsUtils'
-import ImgLogo from '@/imgs/MainLogo.svg'
-import Image from 'next/image'
-import { dataHoraFormatada } from '@/utils/GetTimeAndDate'
+import { Header, Main } from '@/Styles/ComponentsUtils'
+import NavBar from '@/components/NavBar/Index'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -26,15 +24,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <GlobalStyles />
         <Header>
-          <Nav>
-            <Image src={ImgLogo} alt='logo do site: stone currency' />
-            <BoxNavInfo>
-              <BoxInfo>
-                <TitlePrimery>{dataHoraFormatada}</TitlePrimery>
-              </BoxInfo>
-              <TitleSecondy>Dados de cambio disponivel pela mornigstar.</TitleSecondy>
-            </BoxNavInfo>
-          </Nav>
+          <NavBar />
         </Header>
         <Main>
           {children}

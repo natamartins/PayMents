@@ -1,5 +1,5 @@
 "use client"
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const theme = {
     color: {
@@ -28,13 +28,19 @@ export const Main = styled.main``
 
 export const Nav = styled.nav`
 width: 100%;
-max-width: 50%;
+max-width: 850px;
+padding: 0px 10px;
 margin: auto;
 display: flex;
 align-items: center;
 margin-top: 2rem;
 margin-bottom: 5rem;
 gap: 5rem;
+
+/* @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 0px 10px;
+} */
 `
 
 export const BoxNavInfo = styled.div`
@@ -72,6 +78,17 @@ color: ${theme.color.button.green01};
 margin-top: 10px;
 margin-bottom: 1rem;
 `
+
+export const ListQuote = styled.ul`
+`
+
+export const List = styled.li`
+display: flex;
+align-items: center;
+gap: 5px;
+`
+
+export const Value = styled.p``
 
 export const ButtonOn = styled.button`
 width: 150px;
@@ -114,7 +131,8 @@ margin-bottom: 2rem;
 
 export const Form = styled.form`
 width: 100%;
-max-width: 50%;
+max-width: 850px;
+padding: 0px 10px;
 margin: auto;
 `
 

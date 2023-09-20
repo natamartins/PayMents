@@ -49,7 +49,7 @@ const Index = () => {
                         type='number'
                         value={taxa}
                         onChange={(e: any) => setTaxa(e.target.value)}
-                        placeholder='0%'
+                        placeholder='0.00%'
                     />
                 </Box>
             </BoxFormConvert>
@@ -90,7 +90,6 @@ const Index = () => {
                         Converter
                     </ButtonOn>
                 )
-
             }
         </Form>
     )

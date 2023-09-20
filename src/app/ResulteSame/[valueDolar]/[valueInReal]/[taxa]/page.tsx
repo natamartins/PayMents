@@ -7,8 +7,8 @@ import Link from 'next/link'
 import { formatValue } from '@/utils/FormatValue'
 
 const page = ({ params }: any) => {
-    const value = params.same
-    const dolar = formatValue(value)
+    const { valueDolar, valueInReal, taxa } = params
+    const dolar = formatValue(valueInReal)
 
     return (
         <BoxResult>
@@ -20,8 +20,8 @@ const page = ({ params }: any) => {
             </ButtonBackHome>
             <TitlePrimery>O resultado do cálculo é</TitlePrimery>
             <TitleResult>R$ {dolar}</TitleResult>
-            <TitleSecondy>Compra no dinheiro e taxa de 5.2%</TitleSecondy>
-            <TitleSecondy>Contação do dólar: $1,00 = R$5,00</TitleSecondy>
+            <TitleSecondy>Taxa de {taxa}%</TitleSecondy>
+            <TitleSecondy>Contação do dólar: $1,00 = R${valueDolar}</TitleSecondy>
         </BoxResult>
     )
 }
