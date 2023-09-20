@@ -227,6 +227,6 @@ padding: 1rem 0px;
 position: absolute;
 bottom: 0;
 text-align: center;
-background-color: ${theme.color.text[200]};
+background-color: ${theme.color.text[300]};
 `
     
