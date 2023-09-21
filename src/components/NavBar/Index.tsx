@@ -1,11 +1,11 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
+import { useFetch } from '@/hooks/useFetch'
 import { dataHoraFormatada } from '@/utils/GetTimeAndDate'
 import ImgLogo from '@/imgs/MainLogo.svg'
 import { BoxInfo, BoxNavInfo, List, ListQuote, Nav, TitlePrimery, TitleSecondy, Value } from '@/Styles/ComponentsUtils'
-import { useFetch } from '@/hooks/useFetch'
-
+import '@/Styles/style.css'
 interface QuotesTypes {
     id: number
     symbol: string
