@@ -37,10 +37,9 @@ margin-top: 2rem;
 margin-bottom: 5rem;
 gap: 5rem;
 
-/* @media (max-width: 768px) {
-    max-width: 100%;
-    padding: 0px 10px;
-} */
+@media (max-width: 768px) {
+    gap: 1.5rem;
+} 
 `
 
 export const BoxNavInfo = styled.div`
@@ -222,3 +221,12 @@ width: 100%;
 max-width: 50%;
 margin: auto;
 `
+export const Footer = styled.footer`
+width: 100%;
+padding: 1rem 0px;
+position: absolute;
+bottom: 0;
+text-align: center;
+background-color: ${theme.color.text[300]};
+`
+    
