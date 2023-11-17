@@ -1,34 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 🔰 Natã Martins 
+<h1 align="center" style="text-align: center;">
+  PayMents
+</h1>
+    
+<h2 id="project">📁 Teste Prático da Stone </h2>
+<p>Esse é um teste prático da Stone que encontrei livre aqui no github e resolvi fazer. O teste é basicamente criar um conversor e simulador de compra de dólar!
+Com taxa de imposto, taxa IOF.
+</p>
+<p>Foi um projetinho simples e divertido de fazer, o ponto deste projeto e a lógica que você utilizará para a simulação da compra da moeda, somando taxas e valor do dólar.</p>
+<p>Utilizei uma api para pegar o valor do dolar atual e sempre fazer a simulação com dados o mais próximo da realidade possível.</p>
+<p>Utilizando hooks para separar as funcionalidade  da api e manter um código limpo e acessível, axios para o consumo da api.</p>
 
-## Getting Started
+> Fique à vontade para contribuir neste projeto! Lembre-se que a prática leva a perfeição.
 
-First, run the development server:
+<h2 id="tecnology">💻 Tecnologias</h2>
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- Next.JS
+- TypeScript
+- Hooks
+- Clean Code
+
+<h2 id="usage">🎯 Utilização</h2>
+
+A aplicação está disponível para uso [aqui](https://pay-ments.vercel.app/). Você também pode executá-la em sua máquina localmente. Certifique-se de ter o `Node.js` e o `npm` instalados antes de prosseguir com as etapas abaixo:
+
+1. Clone o projeto:
+
+```
+$ git clone https://github.com/natamartins/PayMents.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. No seu terminal, acesse a pasta do projeto:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+$ cd PayMents
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Instale as dependências:
 
-## Learn More
+```
+$ npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Inicie o projeto:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+$ npm run dev
+```
+## rede social
+<div style="display: flex;">
+  <a href="https://www.linkedin.com/in/nata-martins/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" style="margin-right: 2vw" target="_blank"></a>
+</div>
