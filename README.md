@@ -3,52 +3,52 @@
   PayMents
 </h1>
     
-<h2 id="project">📁 Teste Prático da Stone </h2>
-<p>Esse é um teste prático da Stone que encontrei livre aqui no github e resolvi fazer. O teste é basicamente criar um conversor e simulador de compra de dólar!
-Com taxa de imposto, taxa IOF.
+<h2 id="project">📁 Pratic test at Stone </h2>
+<p>This is a practical test from Stone that I found free here on github and decided to do. The test is basically creating a dollar purchase converter and simulator!
+With tax rate, IOF rate.
 </p>
-<p>Foi um projetinho simples e divertido de fazer, o ponto deste projeto e a lógica que você utilizará para a simulação da compra da moeda, somando taxas e valor do dólar.</p>
-<p>Utilizei uma api para pegar o valor do dolar atual e sempre fazer a simulação com dados o mais próximo da realidade possível.</p>
-<p>Utilizando hooks para separar as funcionalidade  da api e manter um código limpo e acessível, axios para o consumo da api.</p>
+<p>It was a simple and fun little project to do, the point of this project is the logic that you will use to simulate the purchase of currency, adding rates and dollar value.</p>
+<p>I used an API to get the current dollar value and always perform the simulation with data as close to reality as possible.</p>
+<p>Using hooks to separate API functionality and maintain clean and accessible code, axios for API consumption.</p>
 
-> Fique à vontade para contribuir neste projeto! Lembre-se que a prática leva a perfeição.
+> Feel free to contribute to this project! Remember that practice makes perfect.
 
-<h2 id="tecnology">💻 Tecnologias</h2>
-Este projeto foi desenvolvido com as seguintes tecnologias:
+<h2 id="tecnology">💻 Technology</h2>
+This project was developed with the following technologies:
 
 - Next.JS
 - TypeScript
 - Hooks
 - Clean Code
 
-<h2 id="usage">🎯 Utilização</h2>
+<h2 id="usage">🎯 Use</h2>
 
-A aplicação está disponível para uso [aqui](https://pay-ments.vercel.app/). Você também pode executá-la em sua máquina localmente. Certifique-se de ter o `Node.js` e o `npm` instalados antes de prosseguir com as etapas abaixo:
+The application is available for use [here](https://pay-ments.vercel.app/). You can also run it on your machine locally. Make sure you have `Node.js` and `npm` installed before proceeding with the steps below:
 
-1. Clone o projeto:
+1. Clone the project:
 
 ```
 $ git clone https://github.com/natamartins/PayMents.git
 ```
 
-2. No seu terminal, acesse a pasta do projeto:
+2. In your termi, access  the past folder:
 
 ```
 $ cd PayMents
 ```
 
-3. Instale as dependências:
+3. Install dependencies:
 
 ```
 $ npm install
 ```
 
-4. Inicie o projeto:
+4. Start the project:
 
 ```
 $ npm run dev
 ```
-## rede social
+## social network
 <div style="display: flex;">
   <a href="https://www.linkedin.com/in/nata-martins/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" style="margin-right: 2vw" target="_blank"></a>
 </div>
